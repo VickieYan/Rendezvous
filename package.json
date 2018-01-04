@@ -1,0 +1,25 @@
+{
+  "name": "v-recruit",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd-mobile": "^2.0.1-alpha.0",
+    "babel": "^6.23.0",
+    "babel-plugin-import": "^1.6.3",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.0-rc1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
