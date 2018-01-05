@@ -69,6 +69,30 @@ User.find({},function(err, doc) {
 ```
 npm install antd-mobile@next --save
 ```
+# react-redux
+用装饰器书写connect
+```
+npm run reject //弹出所有配置项
+npm install babel-plugin-transform-decorators-legacy
+```
+```json
+"babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugin": ["transform-decorators-legacy"]
+  }
+```
+Redux DevTools
+
+* 新建store的时候判断window.devToolsExtension
+* 使用compose结合thunk和window.devToolsExtension
+```javascript
+const store = createStore(reducers, compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension?window.devToolsExtension():f=>f
+))
+```
 # react-router
 安装
 ```
@@ -100,3 +124,9 @@ npm install react-router-dom --save
 ```
 npm install axios --save
 ```
+在package.json中配置”proxy“实现跨域
+```json
+"proxy": "http://localhost:9093"
+```
+
+axios拦截器，统一loading处理
