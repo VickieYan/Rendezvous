@@ -95,3 +95,8 @@ npm install react-router-dom --save
 </BrowserRouter>
 
 ```
+# axios
+简洁好用的发送请求库
+```
+npm install axios --save
+```
