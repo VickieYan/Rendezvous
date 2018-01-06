@@ -130,3 +130,23 @@ npm install axios --save
 ```
 
 axios拦截器，统一loading处理
+
+ 用post方法时需要引入一个插件
+ ```
+npm install body-parser --sava
+ ```
+ # MD5加密
+ 安装
+ ```
+ npm install utility
+ ```
+ 使用方法
+ ```javascript
+const utils = require('utility')
+User.create({user, type, pwd:utils.md5(pwd)}, function(err, doc) {
+        if(err) {
+            return res.json({code: 1, msg: '后端出错了'})
+        }
+        return res.json({code: 0})
+    })
+ ```

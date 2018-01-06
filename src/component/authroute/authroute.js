@@ -24,9 +24,7 @@ class AuthRoute extends Component {
     }
 
     render() {
-        return(
-            <p>判断跳转的地方</p>
-        )
+        return null
     }
 }
 
