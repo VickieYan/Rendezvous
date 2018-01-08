@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import Logo from '../../component/logo/logo'
+import { Redirect } from 'react-router'
 import { List, InputItem, WingBlank, WhiteSpace, Button } from 'antd-mobile'
+import { connect } from 'react-redux'
+import { login } from '../../redux/user.redux'
 
+
+@connect(
+    state=>state.user,
+    {login}
+)
 class Login extends Component {
     constructor(props){
         super(props)
@@ -10,7 +18,7 @@ class Login extends Component {
             pwd: ''
         }
         this.register = this.register.bind(this)
-        this.handleLogin = this.handleChange.bind(this)
+        this.handleLogin = this.handleLogin.bind(this)
     }
 
     register() {
@@ -24,7 +32,7 @@ class Login extends Component {
     }
 
     handleLogin() {
-
+        this.props.login(this.state)
     }
 
     render() {
@@ -33,10 +41,12 @@ class Login extends Component {
                 <Logo />
                 <WingBlank>
                     <List>
+                    {this.props.redirectTo?<Redirect to={this.props.redirectTo}/>: null}
                         <InputItem
                             onChange={v=>this.handleChange('user',v)}
                         >用户</InputItem>
                         <InputItem
+                            type="password"
                             onChange={v=>this.handleChange('pwd',v)}
                         >密码</InputItem>
                     </List>
