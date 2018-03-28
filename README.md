@@ -38,7 +38,7 @@ const User = mongoose.model('user', new mongoose.Schema({
     age:{type:Number,required:true}
 }))
 ```
-## mongodb语法
+## mongodb语法
 ```javascript
 //增
 User.create({
