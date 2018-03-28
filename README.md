@@ -1,4 +1,4 @@
-# v-recruit
+# Rendezvous
 ## Build Setup
 ```
 # install dependencies
@@ -69,8 +69,8 @@ User.find({},function(err, doc) {
 ```
 npm install antd-mobile@next --save
 ```
-# react-redux
-用装饰器书写connect
+# react-redux
+用装饰器书写connect
 ```
 npm run reject //弹出所有配置项
 npm install babel-plugin-transform-decorators-legacy
@@ -100,7 +100,7 @@ npm install react-router-dom --save
 ```
 * BrowserRouter, 包裹整个应用
 * Router 路由对应渲染的组建，可嵌套
-* Link 跳转专用
+* Link 跳转专用
 * Redirect 可以设置进去时候的默认路由
 * Switch 只显示匹配到的第一个路由
 ```html
@@ -120,11 +120,11 @@ npm install react-router-dom --save
 
 ```
 # axios
-简洁好用的发送请求库
+* 简洁好用的发送请求库
 ```
 npm install axios --save
 ```
-在package.json中配置”proxy“实现跨域
+* 在package.json中配置”proxy“实现跨域
 ```json
 "proxy": "http://localhost:9093"
 ```
